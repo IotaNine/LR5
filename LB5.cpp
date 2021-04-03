@@ -43,19 +43,14 @@ int main()
     map1.insert(make_pair(-4, "ELEVEN"));
     for_each(map1.begin(), map1.end(), Proverka); cout << "\n";
     cout << "\t" << "End of 1.1" << "\n" << "\n";
-    bool IsNextStep = true;
     for (auto i = map1.begin(); i != map1.end();)
     {
-        if (!IsNextStep) 
-        {
-            IsNextStep = true;
-        }
         if (i->first == -3)
         {
            i = map1.erase(i);
            IsNextStep = false;
         }
-        if (IsNextStep)
+        else
         {
             i++;
         }
